@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "S3JsonArraySplit", "S3JsonArraySplit", "{1ADD983F-64F1-4589-B5E1-61294B2A9BA1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FCF52EC8-E6E9-4107-8D05-290F6F45A467}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "S3JsonArraySplit", "S3JsonArraySplit\src\S3JsonArraySplit\S3JsonArraySplit.csproj", "{D3DB3172-BF63-47FC-B7BF-8241E5DF2095}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A1B708C6-35EB-4241-8AF4-DB4552E3E0D3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "S3JsonArraySplit.Tests", "S3JsonArraySplit\test\S3JsonArraySplit.Tests\S3JsonArraySplit.Tests.csproj", "{DC7C3E27-D254-4AE3-AA82-98FE4376C820}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3DB3172-BF63-47FC-B7BF-8241E5DF2095}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3DB3172-BF63-47FC-B7BF-8241E5DF2095}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3DB3172-BF63-47FC-B7BF-8241E5DF2095}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3DB3172-BF63-47FC-B7BF-8241E5DF2095}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC7C3E27-D254-4AE3-AA82-98FE4376C820}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC7C3E27-D254-4AE3-AA82-98FE4376C820}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC7C3E27-D254-4AE3-AA82-98FE4376C820}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC7C3E27-D254-4AE3-AA82-98FE4376C820}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FCF52EC8-E6E9-4107-8D05-290F6F45A467} = {1ADD983F-64F1-4589-B5E1-61294B2A9BA1}
+		{D3DB3172-BF63-47FC-B7BF-8241E5DF2095} = {FCF52EC8-E6E9-4107-8D05-290F6F45A467}
+		{A1B708C6-35EB-4241-8AF4-DB4552E3E0D3} = {1ADD983F-64F1-4589-B5E1-61294B2A9BA1}
+		{DC7C3E27-D254-4AE3-AA82-98FE4376C820} = {A1B708C6-35EB-4241-8AF4-DB4552E3E0D3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F574920-7949-481E-8C6E-676150983C0E}
+	EndGlobalSection
+EndGlobal
