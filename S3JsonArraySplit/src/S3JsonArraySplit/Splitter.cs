@@ -24,7 +24,8 @@ public class Splitter
         string sourceJson = ReadS3ObjectAsync(region, sourceBucketName, sourceKey).Result;
 
         SplitJsonByElementAndUpload(region, sourceJson, splitterField,
-            defaultCategory, destinationBucketName, addContext);
+            defaultCategory, destinationBucketName, addContext, 
+            Request.ResultPathPrefix, Request.FilenameSyntax);
     }
 
     static async Task<string> ReadS3ObjectAsync(string Region, string bucketName, string key)
@@ -50,7 +51,8 @@ public class Splitter
 
     static void SplitJsonByElementAndUpload(string Region, string json, 
         string elementToSplitBy, string defaultCategory, 
-            string destinationBucketName, bool AddContext)
+            string destinationBucketName, bool AddContext, 
+            string ResultPathPrefix, string FilenameSyntax)
     {
         var region = RegionEndpoint.GetBySystemName(Region);
 
@@ -74,7 +76,10 @@ public class Splitter
             foreach (var kvp in splitDocuments)
             {
                 string categoryName = kvp.Key;
-                string fileName = $"split_{categoryName}.json";
+//                string fileName = $"split_{categoryName}.json";
+
+                string fileName = FilenameSyntax;
+                fileName = fileName.Replace("{category}",categoryName);
 
                 string jsonContent = null;
 
@@ -96,11 +101,13 @@ public class Splitter
                     jsonContent = kvp.Value.ToString();
                 }
 
+                string resultPath = ResultPathPrefix + fileName;
+
                 // Upload split JSON files to S3
                 var uploadRequest = new PutObjectRequest
                 {
                     BucketName = destinationBucketName,
-                    Key = fileName,
+                    Key = resultPath,
                     ContentBody = jsonContent
                 };
 

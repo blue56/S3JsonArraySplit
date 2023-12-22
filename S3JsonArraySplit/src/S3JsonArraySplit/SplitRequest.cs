@@ -9,4 +9,6 @@ public class SplitRequest
     public string Fieldname { get; set; }
     public bool AddContext { get; set; }
     public string DefaultCategory { get; set; }
+    public string ResultPathPrefix {get; set; }
+    public string FilenameSyntax {get; set;}
 }
